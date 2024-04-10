@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SubCalculator from '../components/SubCalculator';
+---
+
+<Layout title="Twitch calculator">
+	<main class="flex h-screen flex-col text-center items-center justify-center">
+		<h1 class=" text-white text-6xl font-semibold mt-16">Twitch calculator</h1>
+		<SubCalculator client:load />
+	</main>
+</Layout>
