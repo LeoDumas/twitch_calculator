@@ -1,11 +1,10 @@
-import React from 'react';
 import { resolutions } from '../StateManagement';
 import { useStore } from '@nanostores/preact';
 
 type Props = {}
 
 const BitrateCalculator = (props: Props) => {
-    // const $resolution = useStore(resolutions);
+    const $resolution = useStore(resolutions);
 
     return (
         <div>
