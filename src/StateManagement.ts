@@ -8,6 +8,8 @@ export const resolutions = atom({
     "160p": { width: 284, height: 160 },
 });
 
+export const currentTab = atom("Sub") // Sub, Bitrate
+
 export const userFpsValue = atom(0);
 
 export const userSubValue = atom(0);

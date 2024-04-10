@@ -6,6 +6,6 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  site: 'https://LeoDumas.github.io',
+  site: 'https://LeoDumas.github.io/',
   base:'twitch_calculator',
 });

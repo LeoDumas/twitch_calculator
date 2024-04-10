@@ -32,21 +32,26 @@ const SubCalculator = (props: Props) => {
     }
 
     return (
-        <div class=" flex flex-col gap-y-3 bg-black p-6 rounded-lg outline outline-white outline-2">
-            <input
-                type="number"
-                value={$userSubValue}
-                onInput={handleInputChange}
-                placeholder="Enter some text"
-            />
+        <div class=" flex flex-col">
+            <div class="bg-white p-6 rounded-lg shadow-2xl shadow-blue-500/20">
+                <input
+                    type="number"
+                    value={$userSubValue}
+                    onInput={handleInputChange}
+                    placeholder="Number of subs"
+                    class=" border-2 rounded-md pl-3 w-32"
+                    min={0}
+                />
 
-            <select name="subTier" id="subTier" value={$userSubTier} onChange={handleSelectChange}>
-                <option value="Tier 1 Subs">Tier 1 Subs</option>
-                <option value="Tier 2 Subs">Tier 2 Subs</option>
-                <option value="Tier 3 Subs">Tier 3 Subs</option>
-            </select>
+                <select name="subTier" id="subTier" value={$userSubTier} onChange={handleSelectChange}>
+                    <option value="Tier 1 Subs">Tier 1 Subs</option>
+                    <option value="Tier 2 Subs">Tier 2 Subs</option>
+                    <option value="Tier 3 Subs">Tier 3 Subs</option>
+                </select>
 
-            <p class="text-white">Result : ${userSubValue.get()*tierMultiplicator.get()}/month</p>
+                <p class="text-black mt-4">Result : ${userSubValue.get()*tierMultiplicator.get()}/month</p>
+            </div>
+
         </div>
     )
 }
